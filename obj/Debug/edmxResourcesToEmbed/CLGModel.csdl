@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clgModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="clgEntities" annotation:LazyLoadingEnabled="false">
+    <EntitySet Name="clientes" EntityType="clgModel.clientes" />
+    <EntitySet Name="direcciones" EntityType="clgModel.direcciones" />
+    <AssociationSet Name="ClientesDirecciones" Association="clgModel.ClientesDirecciones">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="direcciones" EntitySet="direcciones" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rfc" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="direcciones" Relationship="clgModel.ClientesDirecciones" FromRole="clientes" ToRole="direcciones" />
+  </EntityType>
+  <EntityType Name="direcciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clienteid" Type="Int64" Nullable="false" />
+    <Property Name="calle" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="colonia" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="clientes" Relationship="clgModel.ClientesDirecciones" FromRole="direcciones" ToRole="clientes" />
+  </EntityType>
+  <Association Name="ClientesDirecciones">
+    <End Type="clgModel.clientes" Role="clientes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="clgModel.direcciones" Role="direcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="direcciones">
+        <PropertyRef Name="clienteid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

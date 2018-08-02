@@ -1,0 +1,16 @@
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\WcfClg.dll.config
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\WcfClg.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\WcfClg.pdb
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\obj\Debug\WcfClg.csprojResolveAssemblyReference.cache
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\obj\Debug\WcfClg.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\obj\Debug\WcfClg.pdb
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\EntityFramework.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\EntityFramework.SqlServer.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\MySql.Data.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\MySql.Data.Entity.EF6.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\Newtonsoft.Json.dll
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\EntityFramework.xml
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\EntityFramework.SqlServer.xml
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\MySql.Data.xml
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\MySql.Data.Entity.EF6.xml
+c:\users\jparedes\documents\visual studio 2015\Projects\WcfClg\WcfClg\bin\Newtonsoft.Json.xml
